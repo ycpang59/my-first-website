@@ -36,3 +36,7 @@ CMD / batch:
 ```cmd
 start.cmd
 ```
+
+Continuous integration (CI)
+
+This project includes a GitHub Actions workflow at `.github/workflows/ci.yml` that runs the test suite on push and pull requests (targets Python 3.13). The workflow installs dependencies from `requirements.txt` and runs `pytest`.
