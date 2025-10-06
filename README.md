@@ -2,6 +2,7 @@
 
 ![CI](https://github.com/ycpang59/my-first-website/actions/workflows/ci.yml/badge.svg)
 ![GHCR](https://img.shields.io/badge/ghcr-published-brightgreen)
+![Pages](https://img.shields.io/badge/pages-pending-yellow)
 
 This project has a Python 3.13 virtual environment in `.venv` and a minimal Flask app.
 
@@ -74,3 +75,5 @@ Pull the published image locally:
 ```powershell
 docker pull ghcr.io/ycpang59/my-first-website:latest
 ```
+
+Live site (when published): https://ycpang59.github.io/my-first-website/
