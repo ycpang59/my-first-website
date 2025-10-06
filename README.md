@@ -1,5 +1,7 @@
 # My First Website - Python Setup
 
+![CI](https://github.com/ycpang59/my-first-website/actions/workflows/ci.yml/badge.svg)
+
 This project has a Python 3.13 virtual environment in `.venv` and a minimal Flask app.
 
 Quick start (PowerShell):
