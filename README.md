@@ -1,6 +1,7 @@
 # My First Website - Python Setup
 
 ![CI](https://github.com/ycpang59/my-first-website/actions/workflows/ci.yml/badge.svg)
+![GHCR](https://img.shields.io/badge/ghcr-published-brightgreen)
 
 This project has a Python 3.13 virtual environment in `.venv` and a minimal Flask app.
 
@@ -66,4 +67,10 @@ Image name example:
 
 ```
 ghcr.io/<your-github-username>/my-first-website:latest
+```
+
+Pull the published image locally:
+
+```powershell
+docker pull ghcr.io/ycpang59/my-first-website:latest
 ```
