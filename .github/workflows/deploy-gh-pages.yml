@@ -1,0 +1,35 @@
+name: Build and deploy site to gh-pages
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site directory
+        run: |
+          set -e
+          rm -rf site
+          mkdir site
+          # Copy top-level static files
+          cp -v index.html site/ || true
+          cp -v *.css site/ || true
+          cp -v *.js site/ || true
+          # Copy common asset directories if present
+          for d in assets static public; do
+            if [ -d "$d" ]; then
+              cp -r "$d" site/ || true
+            fi
+          done
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          publish_branch: gh-pages
