@@ -40,3 +40,18 @@ start.cmd
 Continuous integration (CI)
 
 This project includes a GitHub Actions workflow at `.github/workflows/ci.yml` that runs the test suite on push and pull requests (targets Python 3.13). The workflow installs dependencies from `requirements.txt` and runs `pytest`.
+
+Docker
+
+Build the Docker image:
+
+```powershell
+# From the project root
+docker build -t my-first-website:latest .
+```
+
+Run the container locally (maps container port 5000 to host port 5000):
+
+```powershell
+docker run --rm -p 5000:5000 my-first-website:latest
+```
