@@ -57,3 +57,13 @@ Run the container locally (maps container port 5000 to host port 5000):
 ```powershell
 docker run --rm -p 5000:5000 my-first-website:latest
 ```
+
+Publish Docker image (GitHub Packages)
+
+This repository includes a GitHub Actions workflow `.github/workflows/docker-publish.yml` which builds the Docker image and publishes it to GitHub Container Registry (ghcr.io) using the automatically provided `GITHUB_TOKEN`.
+
+Image name example:
+
+```
+ghcr.io/<your-github-username>/my-first-website:latest
+```
